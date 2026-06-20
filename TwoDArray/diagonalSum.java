@@ -3,13 +3,13 @@ package TwoDArray;
 public class diagonalSum {
     public static int diagonal_sum(int matrix[][]) {
         int sum = 0;
-        int n = matrix.length - 1;
+        int n = matrix.length;
 
         for(int i = 0; i <= n; i++){
             sum += matrix[i][i];
 
-            if(i != n-i){
-                sum += matrix[i][n-i];
+            if(i != n-1-i){
+                sum += matrix[i][n-1-i];
             }
         }
         return sum;
